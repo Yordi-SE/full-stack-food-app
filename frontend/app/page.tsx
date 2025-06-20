@@ -1,18 +1,17 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { useAppSelector, useAppDispatch } from '../lib/hooks';
-import { addMeal, updateMeal, deleteMeal } from '../lib/features/meals/mealsSlice';
-import { Header } from '../components/Header';
-import { HeroSection } from '../components/HeroSection';
-import { MealCard } from '../components/MealCard';
-import { MealModal } from '../components/MealModal';
-import { DeleteModal } from '../components/DeleteModal';
-import { Footer } from '../components/Footer';
-import { EmptyState } from '../components/EmptyState';
-import { Button } from '../components/ui/button';
-// Update the import path below if the actual file location is different
-import type { Meal } from '../lib/features/meals/mealsSlice';
+import { useAppSelector, useAppDispatch } from '@/lib/hooks';
+import { addMeal, updateMeal, deleteMeal } from '@/lib/features/meals/mealsSlice';
+import { Header } from '@/components/Header';
+import { HeroSection } from '@/components/HeroSection';
+import { MealCard } from '@/components/MealCard';
+import { MealModal } from '@/components/MealModal';
+import { DeleteModal } from '@/components/DeleteModal';
+import { Footer } from '@/components/Footer';
+import { EmptyState } from '@/components/EmptyState';
+import { Button } from '@/components/ui/button';
+import type { Meal } from '@/lib/features/meals/mealsSlice';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function Home() {

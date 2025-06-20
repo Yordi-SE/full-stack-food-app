@@ -1,12 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
-// Update the path below if your hooks file is located elsewhere
-import { useAppDispatch } from '../lib/hooks';
-import { setSearchTerm } from '../lib/features/meals/mealsSlice';
+import { useAppDispatch } from '@/lib/hooks';
+import { setSearchTerm } from '@/lib/features/meals/mealsSlice';
 
 export function HeroSection() {
   const [localSearch, setLocalSearch] = useState('');
