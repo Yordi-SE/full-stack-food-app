@@ -7,12 +7,12 @@ import (
 
 func SetupRouter(foodController *controller.FoodController) *gin.Engine {
     r := gin.Default()
-
-	r.GET("/foods", foodController.GetAllFoods)
-	r.POST("/foods", foodController.AddFood)
-	r.PUT("/foods/:id", foodController.UpdateFood)
-	r.DELETE("/foods/:id", foodController.DeleteFood)
-	r.GET("/foods/search", foodController.SearchFoodByName)
+	api := r.Group("/api")
+	api.GET("/foods", foodController.GetAllFoods)
+	api.POST("/foods", foodController.AddFood)
+	api.PUT("/foods/:id", foodController.UpdateFood)
+	api.DELETE("/foods/:id", foodController.DeleteFood)
+	api.GET("/foods/search", foodController.SearchFoodByName)
 
 	return r
 }
